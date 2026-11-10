@@ -1,0 +1,589 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f8fb;
+    color: #263746;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #123047;
+    color: white;
+    padding: 18px 7%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contenedor-header {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.activo {
+    color: #45d6c8;
+}
+
+/* PORTADA */
+.portada {
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.contenido-portada {
+    flex: 1;
+}
+
+.contenido-portada h2 {
+    font-size: 45px;
+    color: #123047;
+    margin-bottom: 15px;
+}
+
+.contenido-portada p {
+    font-size: 18px;
+    color: #627585;
+    margin-bottom: 25px;
+}
+
+.portada img {
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* BOTONES */
+.boton,
+.boton-tarjeta {
+    display: inline-block;
+    background-color: #12a99b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.boton:hover,
+.boton-tarjeta:hover {
+    background-color: #087d74;
+    transform: translateY(-3px);
+}
+
+/* SECCIÓN DESTINOS */
+.destinos {
+    padding: 55px 7%;
+    background-color: white;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-seccion h2 {
+    font-size: 32px;
+    color: #123047;
+}
+
+.titulo-seccion p {
+    color: #71808c;
+    margin-top: 8px;
+}
+
+.contenedor-destinos {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* TARJETAS */
+.tarjeta {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 22px;
+}
+
+.contenido-tarjeta h3 {
+    color: #123047;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contenido-tarjeta p {
+    color: #71808c;
+    margin-bottom: 20px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #123047;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 0;
+}
+
+/* DISEÑO RESPONSIVE */
+@media (max-width: 768px) {
+
+    .contenedor-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .portada {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenido-portada h2 {
+        font-size: 34px;
+    }
+
+    .portada img {
+        width: 100%;
+        height: 260px;
+    }
+
+    .contenedor-destinos {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+
+/* =================================
+   PÁGINA NOSOTROS
+================================= */
+
+/* ENCABEZADO DE LA SECCIÓN */
+.encabezado-nosotros {
+    background: linear-gradient(135deg, #123047, #176477);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.encabezado-nosotros h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.encabezado-nosotros p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 17px;
+    color: #dcebef;
+}
+
+/* CONTENEDOR DEL EQUIPO */
+.equipo {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* TARJETAS DE LOS INTEGRANTES */
+.tarjeta-equipo {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.tarjeta-equipo:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* FOTOGRAFÍAS */
+.tarjeta-equipo img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* CONTENIDO DE LAS TARJETAS */
+.contenido-equipo {
+    padding: 25px 20px;
+}
+
+.contenido-equipo h3 {
+    font-size: 22px;
+    color: #123047;
+    margin-bottom: 8px;
+}
+
+.contenido-equipo .cargo {
+    color: #12a99b;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.contenido-equipo p:last-child {
+    color: #71808c;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ENLACE DEL FOOTER */
+footer a {
+    display: inline-block;
+    color: #45d6c8;
+    text-decoration: none;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* RESPONSIVE NOSOTROS */
+@media (max-width: 900px) {
+    .equipo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .equipo {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-nosotros h2 {
+        font-size: 28px;
+    }
+
+    .tarjeta-equipo img {
+        height: 300px;
+    }
+}
+
+
+/* =================================
+   PÁGINAS DE DESTINOS TURÍSTICOS
+================================= */
+
+.pagina-destino {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 25px 55px;
+}
+
+/* PORTADA DEL DESTINO */
+.portada-destino {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 18px;
+    margin-bottom: 45px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.portada-destino img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portada-destino::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(10, 30, 45, 0.9),
+        rgba(10, 30, 45, 0.05)
+    );
+}
+
+.texto-portada-destino {
+    position: absolute;
+    bottom: 45px;
+    left: 45px;
+    z-index: 1;
+    color: white;
+}
+
+.texto-portada-destino h2 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.texto-portada-destino p {
+    font-size: 18px;
+}
+
+.etiqueta-destino {
+    background-color: #12a99b;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* INFORMACIÓN PRINCIPAL */
+.informacion-destino {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.descripcion-destino h2 {
+    font-size: 30px;
+    color: #123047;
+    margin-bottom: 20px;
+}
+
+.descripcion-destino p {
+    color: #627585;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.imagen-secundaria img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* DATO DEL DESTINO */
+.dato-destino {
+    background-color: #e6f7f5;
+    border-left: 5px solid #12a99b;
+    padding: 15px 20px;
+    border-radius: 7px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: #123047;
+}
+
+/* SECCIONES DE INFORMACIÓN */
+.detalles-destino {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.bloque-informacion {
+    background-color: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.bloque-informacion h3 {
+    color: #123047;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.subtitulo-bloque {
+    color: #71808c;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* LISTA DE SITIOS */
+.lista-destino {
+    list-style: none;
+}
+
+.lista-destino li {
+    padding: 13px 10px;
+    border-bottom: 1px solid #e5ebef;
+    color: #627585;
+}
+
+.lista-destino li::before {
+    content: "✓";
+    color: #12a99b;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+/* TABLA DE PRECIOS */
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-precios th {
+    background-color: #123047;
+    color: white;
+    padding: 14px 12px;
+    text-align: left;
+}
+
+.tabla-precios td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e5ebef;
+    color: #627585;
+}
+
+.tabla-precios tr:nth-child(even) {
+    background-color: #f4f8fb;
+}
+
+.tabla-precios td:last-child {
+    color: #087d74;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* VIDEO */
+.video-destino {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.video-destino h2 {
+    color: #123047;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.video-destino p {
+    color: #71808c;
+    margin-bottom: 25px;
+}
+
+.contenedor-video {
+    max-width: 800px;
+    margin: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contenedor-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* BOTÓN VOLVER */
+.volver-destinos {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .portada-destino {
+        height: 300px;
+    }
+
+    .texto-portada-destino {
+        left: 20px;
+        bottom: 25px;
+        right: 20px;
+    }
+
+    .texto-portada-destino h2 {
+        font-size: 34px;
+    }
+
+    .informacion-destino {
+        grid-template-columns: 1fr;
+    }
+
+    .detalles-destino {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-secundaria img {
+        height: 250px;
+    }
+
+    .tabla-precios {
+        font-size: 13px;
+    }
+
+    .tabla-precios th,
+    .tabla-precios td {
+        padding: 10px 7px;
+    }
+}
+
